@@ -23,7 +23,7 @@ In the vagrantfile folder run
 vagrant up
 ```
 
-This takes a while and will create 3 VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>".
+This takes a while and will create 3 Ubuntu Server 16.04 LTS VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>".
 
 ODL machine:
 
@@ -70,7 +70,24 @@ OFM machine:
 grunt-lti
 ```
 Now you have the following setup.
+
 ![alt text](https://raw.githubusercontent.com/baiox86/odf-ofm-mininet-install/master/img/finalsetup.png)
+
+### IP adresses and port fowarding
+
+ODL:
+-10.10.10.2
+ --guest: 8181, host: 58181
+Mininet:
+-10.10.10.3
+OFM:
+-10.10.10.4
+ --guest: 9000, host: 19000
+
+To access, for example, the OFM machine you go to your browser and run:
+```
+localhost:19000
+```
 ## Extras
 
 ODL machine:
