@@ -17,18 +17,22 @@ VirtualBox
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step on how to use the script.
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+In the vagrantfile folder run
 
 ```
-until finished
+vagrant up
+```
+
+This will create 3 VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>.
+
+ODL machine:
+```
+vagrant ssh odl
+karaf
+#when odl opens up, run:
+lti
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
