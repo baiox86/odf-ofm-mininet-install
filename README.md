@@ -25,7 +25,7 @@ In the vagrantfile folder run
 vagrant up
 ```
 
-This will create 3 VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>.
+This will create 3 VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>".
 
 ODL machine:
 
@@ -36,15 +36,33 @@ sudo reboot
 ```
 This makes you able to run "karaf" and immediatly execute ODL.
 
+Mininet machine:
+```
+vagrant ssh mininet
+./alias.sh
+sudo reboot
+```
+This makes you able to run "network" and create a 4 switch network.
 
-End with an example of getting some data out of the system or using it for a little demo
+OFM machine:
+```
+vagrant ssh ofm
+./alias.sh
+sudo reboot
+```
+This makes you able to run "grunt-cli" and run grunt in the correct folder.
+
+
+## Usage
+I recommend a tiling terminal, like tilix here.
+![alt text](https://raw.githubusercontent.com/baiox86/odf-ofm-mininet-install/master/img/tilix.png)
 
 ## Extras
 
 ODL machine:
 When you run:
 ```
-./odllti.sh
+sudo ./odllti.sh
 ```
 It will add an alias to the following command:
 ```
