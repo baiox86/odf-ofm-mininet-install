@@ -35,6 +35,11 @@ karaf
 lti
 ```
 
+The lti command is an alias that runs the following:
+```
+feature:install odl-restconf odl-l2switch-switch odl-mdsal-apidocs odl-dlux-core odl-dluxapps-applications odl-dluxapps-topology odl-dluxapps-yangutils
+```
+
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
