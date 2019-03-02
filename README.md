@@ -1,10 +1,10 @@
 # ODF, OFM and Mininet install scripts
 
-Script to install OpenDaylight, OpenFlow Manager and mininet as well as configure them using vagrant. This script was made to reduce the tears and suffering of my fellow college students.
+Script to install OpenDaylight (karaf), OpenFlow Manager and mininet as well as configure them using vagrant. This script was made to reduce the tears and suffering of my fellow college students.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+If you're here for the LTI Class, check the EXTRAS section, after installing.
 
 ### Prerequisites
 
@@ -28,43 +28,30 @@ vagrant up
 This will create 3 VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>.
 
 ODL machine:
+
 ```
 vagrant ssh odl
-karaf
-#when odl opens up, run:
-lti
+./alias.sh
+sudo reboot
 ```
+This makes you able to run "karaf" and immediatly execute ODL.
 
-The lti command is an alias that runs the following:
-```
-feature:install odl-restconf odl-l2switch-switch odl-mdsal-apidocs odl-dlux-core odl-dluxapps-applications odl-dluxapps-topology odl-dluxapps-yangutils
-```
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Extras
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+ODL machine:
+When you run:
 ```
-Give an example
+./odllti.sh
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
+It will add an alias to the following command:
 ```
-Give an example
+feature:install odl-restconf odl-l2switch-switch odl-mdsal-apidocs odl-dlux-core odl-dluxapps-applications odl-dluxapps-topology odl-dluxapps-yangutils
 ```
+When you are on opendaylight you can simply run lti instead of the full command.
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Authors
 
