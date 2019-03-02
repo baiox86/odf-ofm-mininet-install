@@ -1,6 +1,6 @@
 # ODF, OFM and Mininet install scripts
 
-Script to install OpenDaylight (karaf), OpenFlow Manager and mininet as well as configure them using vagrant. This script was made to reduce the tears and suffering of my fellow college students.
+Script to install OpenDaylight (karaf), OpenFlow Manager and mininet as well as configure them using vagrant. This script was made to reduce the tears and suffering of my fellow college students. It even installs a webserver using grunt.
 
 ## Getting Started
 
@@ -9,11 +9,9 @@ If you're here for the LTI Class, check the EXTRAS section, after installing.
 ### Prerequisites
 
 Software you need to run this:
+-Vagrant
+-VirtualBox
 
-```
-Vagrant
-VirtualBox
-```
 
 ### Installing
 
@@ -32,7 +30,7 @@ ODL machine:
 ```
 vagrant ssh odl
 ./alias.sh
-sudo reboot
+source ~/.bashrc
 ```
 This makes you able to run "karaf" and immediatly execute ODL.
 
@@ -40,7 +38,7 @@ Mininet machine:
 ```
 vagrant ssh mininet
 ./alias.sh
-sudo reboot
+source ~/.bashrc
 ```
 This makes you able to run "network" and create a 4 switch network.
 
@@ -48,14 +46,28 @@ OFM machine:
 ```
 vagrant ssh ofm
 ./alias.sh
-sudo reboot
+./lasttouches.sh
+source ~/.bashrc
 ```
-This makes you able to run "grunt-cli" and run grunt in the correct folder.
+This installs OFM app and makes you able to run "grunt-lti" to run grunt in the correct folder.
 
 
 ## Usage
 I recommend a tiling terminal, like tilix here.
 ![alt text](https://raw.githubusercontent.com/baiox86/odf-ofm-mininet-install/master/img/tilix.png)
+
+ODL machine: 
+```
+karaf
+```
+Mininet machine:
+```
+network
+```
+OFM machine:
+```
+grunt-lti
+```
 
 ## Extras
 
@@ -68,7 +80,7 @@ It will add an alias to the following command:
 ```
 feature:install odl-restconf odl-l2switch-switch odl-mdsal-apidocs odl-dlux-core odl-dluxapps-applications odl-dluxapps-topology odl-dluxapps-yangutils
 ```
-When you are on opendaylight you can simply run lti instead of the full command.
+When you are on opendaylight you can simply run lti instead of the full command to install the needed packages.
 
 
 ## Authors
