@@ -76,13 +76,13 @@ Now you have the following setup.
 ### IP adresses and port fowarding
 
 1. ODL:
-   -10.10.10.2
-   -guest: 8181, host: 58181
+   - 10.10.10.2
+   - guest: 8181, host: 58181
 2. Mininet:
- -10.10.10.3
+ - 10.10.10.3
 3. OFM:
-   -10.10.10.4
-   -guest: 9000, host: 19000
+   - 10.10.10.4
+   - guest: 9000, host: 19000
 
 To access, for example, the OFM machine you go to your browser and run:
 ```
