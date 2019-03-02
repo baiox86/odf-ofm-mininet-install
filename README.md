@@ -23,7 +23,7 @@ In the vagrantfile folder run
 vagrant up
 ```
 
-This will create 3 VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>".
+This takes a while and will create 3 VMs and install everything you need. After the script finishes you need to do some things. You will need to ssh into the machines, that can be done by simply running "vagrant ssh <machine name>".
 
 ODL machine:
 
@@ -56,6 +56,7 @@ This installs OFM app and makes you able to run "grunt-lti" to run grunt in the 
 I recommend a tiling terminal, like tilix here.
 ![alt text](https://raw.githubusercontent.com/baiox86/odf-ofm-mininet-install/master/img/tilix.png)
 
+Run the following.
 ODL machine: 
 ```
 karaf
@@ -68,7 +69,8 @@ OFM machine:
 ```
 grunt-lti
 ```
-
+Now you have the following setup.
+![alt text](https://raw.githubusercontent.com/baiox86/odf-ofm-mininet-install/master/img/finalsetup.png)
 ## Extras
 
 ODL machine:
