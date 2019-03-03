@@ -9,8 +9,8 @@ If you're here for the LTI Class, check the EXTRAS section, after installing.
 ### Prerequisites
 
 Software you need to run this:
--Vagrant
--VirtualBox
+ - Vagrant
+ - VirtualBox
 
 
 ### Installing
